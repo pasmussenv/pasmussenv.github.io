@@ -19,7 +19,7 @@ a:hover{text-decoration:underline}
 }
 .lead{color:var(--muted)}
 
-/* Tarjetas / grid moderno */
+/* Sección: Tarjetas de proyectos (grid) */
 .cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin:14px 0 4px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 1px 2px rgba(0,0,0,.04);transition:.25s}
 .card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
@@ -28,17 +28,16 @@ a:hover{text-decoration:underline}
   margin:0 0 8px;
   font-size:18px;
   color:var(--accent);
-  font-weight:600;
+  font-weight:400;
 }
 .card-body p{margin:0 0 12px;color:var(--fg)}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--fg);font-size:15px;font-weight:500;text-decoration:none;transition:.25s}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);font-size:15px;font-weight:500;text-decoration:none;transition:.25s}
 .btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-2px)}
 .btn .ext{margin-left:4px}
 
-/* Tech grid */
+/* Sección: Tecnologías con las que trabajo */
 .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:12px 0 4px}
 .tech-item{display:flex;gap:10px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:none;transition:.2s}
-.tech-item:hover{}
 .ti-icon{flex:0 0 auto;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accent);background:transparent;border:1px solid transparent}
 .ti-body h4{margin:0 0 4px;font-size:16px;color:var(--accent);font-weight:400}
 .ti-pills{margin:6px 0 0;display:flex;flex-wrap:wrap;gap:6px}
@@ -56,10 +55,10 @@ a:hover{text-decoration:underline}
 footer{padding:56px 0;color:#777;text-align:center}
 
 /* Tipos */
-h1,h2,h3,h4{color:#3a3a3a; font-weight:400}
+h1,h2,h3,h4{color:var(--fg); font-weight:400}
 p,ul,li,.card-body p{color:var(--fg)}
 
-/* === HERO STRATA: mitad izquierda sólida + avatar redondo; derecha contenido === */
+/* === HERO: mitad izquierda sólida + avatar redondo; derecha contenido === */
 .hero.hero-strata{ display:grid; grid-template-columns: 420px 1fr; min-height:100vh }
 .hero-left{
   background: var(--accent); /* color exacto del símbolo (#7A927B) */
@@ -93,7 +92,7 @@ p,ul,li,.card-body p{color:var(--fg)}
 .hero-left .welcome-text h2{ font-size:18px; font-weight:400; color:#ffffff; margin:4px 0 6px }
 .hero-left .welcome-text p{ font-size:16px; line-height:1.55; color:#ffffff; font-weight:400; margin:6px 0; text-align:justify }
 
-/* === DOS COLUMNAS NUEVO LAYOUT === */
+/* === DOS COLUMNAS LAYOUT === */
 .two-col{
   display:grid;
   grid-template-columns: 420px 1fr;
@@ -128,6 +127,12 @@ p,ul,li,.card-body p{color:var(--fg)}
   padding:24px;
 }
 
+/* Énfasis en columna izquierda: verde y semibold */
+.two-col .col-left strong{
+  color: var(--accent);
+  font-weight: 600;
+}
+
 @media(max-width:900px){
   .two-col{ grid-template-columns:1fr; gap:32px }
 }
@@ -160,17 +165,11 @@ blockquote{
   margin:16px 0;
   padding:12px 16px;
   border-left:4px solid var(--accent);
-  background:#f9f9f9;
+  background:var(--card);
   color:var(--muted);
   border-radius:8px;
   font-style:italic;
-}
-
-/* Negritas en columna izquierda -> verde sin bold */
-.two-col .col-left strong{
-  color: var(--accent);
-  font-weight: 400; 
-}
+} 
 
 /* Contacto: iconos en línea con subrayado animado al hover */
 .hero-left .contact-mini .contact-icons{
