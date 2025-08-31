@@ -88,7 +88,7 @@ p,ul,li,.card-body p{color:var(--fg)}
   .hero-right .hero-subtitle{ font-size:20px }
 }
 
-/* Bio franja verde: tamaño cuerpo y peso normal */
+/* Bio franja verde*/
 .hero-left .welcome-text h2{ font-size:18px; font-weight:400; color:#ffffff; margin:4px 0 6px }
 .hero-left .welcome-text p{ font-size:16px; line-height:1.55; color:#ffffff; font-weight:400; margin:6px 0; text-align:justify }
 
@@ -205,6 +205,6 @@ blockquote{
   transition:transform .2s ease, background .2s ease;
 }
 .hero-left .contact-mini .contact-icons .icon:hover::after{
-  background:#fff; /* usa var(--accent) si prefieres el matcha */
+  background:#fff; 
   transform:scaleX(1);
 }
