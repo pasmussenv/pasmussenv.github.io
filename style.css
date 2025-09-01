@@ -61,7 +61,7 @@ a:hover{text-decoration:underline}
   padding:6px 14px;
   border:none;
   border-radius:999px;
-  background: var(--accent); /* usar acento del tema */
+  background: var(--accent); 
   color:#fff;
   font-size:14px;
   font-weight:500;
